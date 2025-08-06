@@ -126,6 +126,16 @@
             <artifactId>cloud-plugin-storage-volume-solidfire</artifactId>
             <version>${project.version}</version>
         </dependency>
+         <dependency>
+            <groupId>org.apache.cloudstack</groupId>
+            <artifactId>cloud-plugin-storage-volume-netapp</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cloudstack</groupId>
+            <artifactId>cloud-plugin-storage-image-netapp</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.cloudstack</groupId>
             <artifactId>cloud-plugin-storage-volume-cloudbyte</artifactId>
