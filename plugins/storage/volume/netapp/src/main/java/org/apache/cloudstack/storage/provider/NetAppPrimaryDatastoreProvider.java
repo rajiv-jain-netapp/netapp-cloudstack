@@ -8,7 +8,8 @@ import org.apache.cloudstack.engine.subsystem.api.storage.HypervisorHostListener
 import org.apache.cloudstack.engine.subsystem.api.storage.PrimaryDataStoreProvider;
 import org.apache.cloudstack.storage.driver.NetAppPrimaryDatastoreDriver;
 import org.apache.cloudstack.storage.lifecycle.NetAppPrimaryDatastoreLifecycle;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
 import org.springframework.stereotype.Component;
 
 import java.util.HashSet;
@@ -18,7 +19,7 @@ import java.util.Set;
 @Component
 public class NetAppPrimaryDatastoreProvider implements PrimaryDataStoreProvider {
 
-    private static final Logger s_logger = Logger.getLogger(NetAppPrimaryDatastoreProvider.class);
+    private static final Logger s_logger = (Logger)LogManager.getLogger(NetAppPrimaryDatastoreProvider.class);
     private NetAppPrimaryDatastoreDriver primaryDatastoreDriver;
     private NetAppPrimaryDatastoreLifecycle primaryDatastoreLifecycle;
 

@@ -9,7 +9,8 @@ import org.apache.cloudstack.engine.subsystem.api.storage.ImageStoreProvider;
 import org.apache.cloudstack.storage.driver.NetAppSecondaryDatastoreDriver;
 import org.apache.cloudstack.storage.image.datastore.ImageStoreProviderManager;
 import org.apache.cloudstack.storage.lifecycle.NetAppSecondaryDatastoreLifecycle;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
@@ -20,7 +21,7 @@ import java.util.Set;
 @Component
 public class NetAppSecondaryDatastoreProvider implements ImageStoreProvider {
 
-    private static final Logger s_logger = Logger.getLogger(NetAppSecondaryDatastoreProvider.class);
+    private static final Logger s_logger = (Logger)LogManager.getLogger(NetAppSecondaryDatastoreProvider.class);
     @Inject
     ImageStoreProviderManager storeMgr;
     private NetAppSecondaryDatastoreDriver secondaryDatastoreDriver;

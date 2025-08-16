@@ -20,7 +20,8 @@ import org.apache.cloudstack.engine.subsystem.api.storage.TemplateInfo;
 import org.apache.cloudstack.engine.subsystem.api.storage.VolumeInfo;
 import org.apache.cloudstack.framework.async.AsyncCompletionCallback;
 import org.apache.cloudstack.storage.command.CommandResult;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
@@ -29,7 +30,7 @@ import java.util.Map;
 @Component
 public class NetAppPrimaryDatastoreDriver implements PrimaryDataStoreDriver {
 
-    private static final Logger s_logger = Logger.getLogger(NetAppPrimaryDatastoreDriver.class);
+    private static final Logger s_logger = (Logger)LogManager.getLogger(NetAppPrimaryDatastoreDriver.class);
     @Override
     public Map<String, String> getCapabilities() {
         s_logger.trace("NetAppPrimaryDatastoreDriver: getCapabilities: Called");
